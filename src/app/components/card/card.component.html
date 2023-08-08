@@ -1,9 +1,30 @@
 <div class="card" *ngFor="let item of list">
-  <h1>Reserva</h1>
-  <p>Nome do hóspede</p>
-  <p>{{ item.nomeHospede }}</p>
-  <p>Data do início</p>
-  <p>Data do fim</p>
-  <p>Quantidade de hóspedes</p>
-  <p>Status</p>
+  <div class="content">
+    <h1>Reserva</h1>
+    <p class="title">Nome do hóspede</p>
+    <p>{{ item.nomeHospede }}</p>
+    <p class="title">Data do início</p>
+    <p>{{ item.dataInicio | date : "dd MMM, yyyy" }}</p>
+    <p class="title">Data do fim</p>
+    <p>{{ item.dataFim | date : "dd MMM, yyyy" }}</p>
+    <p class="title">Quantidade de hóspedes</p>
+    <p>{{ item.quantidadePessoas }}</p>
+    <p class="title">Status</p>
+    <p
+      [ngStyle]="{
+        color:
+          item.status === 'CANCELADA'
+            ? 'red'
+            : item.status === 'CONFIRMADA'
+            ? 'green'
+            : 'black'
+      }"
+    >
+      {{ item.status }}
+    </p>
+  </div>
+  <div class="actions">
+    <button>Editar</button>
+    <button [disabled]="item.status === 'CANCELADA'">Cancelar reserva</button>
+  </div>
 </div>

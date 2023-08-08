@@ -1,8 +1,8 @@
 export interface Reserva {
   id?: number;
   nomeHospede: string;
-  dataInicio: any;
-  dataFim: any;
+  dataInicio: Date;
+  dataFim: Date;
   quantidadePessoas: number;
   status: any;
 }
