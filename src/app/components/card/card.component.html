@@ -1,0 +1,49 @@
+<div class="card" *ngFor="let item of list; let i = index">
+  <div class="content">
+    <h1>Reserva {{ i + 1 }}</h1>
+    <p class="title">Nome do hóspede</p>
+    <p>{{ item.nomeHospede }}</p>
+    <p class="title">Data do início</p>
+    <p>{{ item.dataInicio | date : "dd MMM, yyyy" }}</p>
+    <p class="title">Data do fim</p>
+    <p>{{ item.dataFim | date : "dd MMM, yyyy" }}</p>
+    <p class="title">Quantidade de hóspedes</p>
+    <p>{{ item.quantidadePessoas }}</p>
+    <p class="title">Status</p>
+    <div
+      [ngStyle]="{
+        backgroundColor:
+          item.status === 'CANCELADA'
+            ? '#E95555'
+            : item.status === 'CONFIRMADA'
+            ? '#79BA69'
+            : '#C8C8C8'
+      }"
+      class="status-container"
+    >
+      <ng-icon *ngIf="item.status === 'CONFIRMADA'" name="heroCheck"></ng-icon>
+      <ng-icon *ngIf="item.status === 'CANCELADA'" name="heroXMark"></ng-icon>
+      <ng-icon *ngIf="item.status === 'PENDENTE'" name="heroClock"></ng-icon>
+      <p class="status">
+        {{ item.status }}
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <button type="button" title="Editar detalhes" class="action-button edit">
+      Editar
+    </button>
+
+    <button
+      type="button"
+      title="Cancelar reserva"
+      class="action-button cancel"
+      [disabled]="item.status === 'CANCELADA'"
+      [ngStyle]="{
+        cursor: item.status !== 'CANCELADA' ? 'pointer' : 'not-allowed'
+      }"
+    >
+      Cancelar
+    </button>
+  </div>
+</div>

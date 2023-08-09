@@ -1,27 +1,15 @@
 # DesafioIbmFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+![Image](./src/assets/docs/1.png)
+![Image](./src/assets/docs/2.png)
+![Image](./src/assets/docs/3.png)
 
-## Development server
+## Executando o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Execute o projeto no backend. Faça registros no banco, de preferência com reservas com informações diferentes de status. Abra o projeto frontend, execute `npm` para instalar as dependências e depois execute `npm start`. Navegue para `http://localhost:4200/` caso não abra automaticamente
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Consumo de API
+- Renderização condicional de ícones
+- Estilização condicional de acordo com o atributo que vem do backend
