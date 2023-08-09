@@ -14,9 +14,10 @@ import {
   heroClock,
 } from '@ng-icons/heroicons/outline';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, HeaderComponent],
+  declarations: [AppComponent, CardComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
