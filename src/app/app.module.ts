@@ -13,9 +13,10 @@ import {
   heroXMark,
   heroClock,
 } from '@ng-icons/heroicons/outline';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent],
+  declarations: [AppComponent, CardComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
