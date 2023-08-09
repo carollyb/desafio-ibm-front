@@ -1,8 +1,8 @@
 # DesafioIbmFront
 
-![Image](./src/assets/docs/1.png)
-![Image](./src/assets/docs/2.png)
-![Image](./src/assets/docs/3.png)
+![Image](./src/assets/docs/1.PNG)
+![Image](./src/assets/docs/2.PNG)
+![Image](./src/assets/docs/3.PNG)
 
 ## Executando o projeto
 
